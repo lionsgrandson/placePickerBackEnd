@@ -47,4 +47,3 @@ export default function AvailablePlaces({ onSelectPlace }) {
     />
   );
 }
-// TODO search async and await
