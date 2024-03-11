@@ -26,8 +26,6 @@ export async function fetchSavedPlaces() {
   const response = await fetch("http://localhost:3000/user-places");
   const resData = await response.json();
 
-  console.log("loaded")
-  
   if (!response.ok) {
     //failed
     throw new Error("Failed to save places");

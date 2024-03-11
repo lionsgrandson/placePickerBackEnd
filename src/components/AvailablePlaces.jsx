@@ -21,7 +21,6 @@ export default function AvailablePlaces({ onSelectPlace }) {
           setisLoading(false);
         });
       } catch (error) {
-        console.log(error);
         setError({
           message:
             error.message || "Could not fetch places, please try again later",
