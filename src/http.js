@@ -1,4 +1,3 @@
-
 export async function fetchAvailablePlaces() {
   const response = await fetch("http://localhost:3000/places");
   const resData = await response.json();
@@ -22,4 +21,16 @@ export async function updateUserPlaces(places) {
     throw new Error("Failed to update user data.");
   }
   return resData.message;
+}
+export async function fetchSavedPlaces() {
+  const response = await fetch("http://localhost:3000/user-places");
+  const resData = await response.json();
+
+  console.log("loaded")
+  
+  if (!response.ok) {
+    //failed
+    throw new Error("Failed to save places");
+  }
+  return resData.places;
 }
